@@ -60,6 +60,10 @@ namespace Parcial2_ap1_2018_0971.UI.Consultas
             // 
             this.FiltroComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltroComboBox.FormattingEnabled = true;
+            this.FiltroComboBox.Items.AddRange(new object[] {
+            "Proyecto Id",
+            "Descripción",
+            "Tiempo Total"});
             this.FiltroComboBox.Location = new System.Drawing.Point(12, 27);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(141, 23);
