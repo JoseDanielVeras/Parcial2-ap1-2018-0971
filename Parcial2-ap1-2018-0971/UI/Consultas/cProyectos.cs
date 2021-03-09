@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Parcial2_ap1_2018_0971.BLL;
+using Parcial2_ap1_2018_0971.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,7 @@ namespace Parcial2_ap1_2018_0971.UI.Consultas
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

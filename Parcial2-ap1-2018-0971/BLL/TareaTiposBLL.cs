@@ -12,14 +12,14 @@ namespace Parcial2_ap1_2018_0971.BLL
 {
     public class TareaTiposBLL
     {
-        public static bool ExisteProyecto(string descripcion)
+        public static TareasTipos Buscar(int tareasTiposId)
         {
-            bool paso = false;
+            TareasTipos tipo;
             Contexto contexto = new Contexto();
 
             try
             {
-                paso = contexto.Proyectos.Any(e => e.Descripcion.ToLower() == descripcion.ToLower());
+                tipo = contexto.TareasTipos.Find(tareasTiposId);
             }
             catch (Exception)
             {
@@ -31,18 +31,17 @@ namespace Parcial2_ap1_2018_0971.BLL
                 contexto.Dispose();
             }
 
-            return paso;
+            return tipo;
         }
 
-        private static bool Insertar(Proyectos proyectos)
+        public static string BuscarRequerimiento(int tareasTiposId)
         {
-            bool paso = false;
+            TareasTipos tipo;
             Contexto contexto = new Contexto();
 
             try
             {
-                contexto.Proyectos.Add(proyectos);
-                paso = contexto.SaveChanges() > 0;
+                tipo = contexto.TareasTipos.Find(tareasTiposId);
             }
             catch (Exception)
             {
@@ -54,25 +53,17 @@ namespace Parcial2_ap1_2018_0971.BLL
                 contexto.Dispose();
             }
 
-            return paso;
+            return tipo.Requerimiento;
         }
 
-        private static bool Modificar(Proyectos proyectos)
+        public static int BuscarTiempo(int tareasTiposId)
         {
-            bool paso = false;
+            TareasTipos tipo;
             Contexto contexto = new Contexto();
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM ProyectosDatalle where ProyectoId = {proyectos.ProyectoId}");
-
-                foreach (var anterior in proyectos.DetalleProyecto)
-                {
-                    contexto.Entry(anterior).State = EntityState.Added;
-                }
-
-                contexto.Entry(proyectos).State = EntityState.Modified;
-                paso = contexto.SaveChanges() > 0;
+                tipo = contexto.TareasTipos.Find(tareasTiposId);
             }
             catch (Exception)
             {
@@ -84,25 +75,72 @@ namespace Parcial2_ap1_2018_0971.BLL
                 contexto.Dispose();
             }
 
-            return paso;
+            return tipo.Tiempo;
         }
 
-        public static bool Guardar(Proyectos proyectos)
+        private static bool Insertar(TareasTipos tareasTipos)
         {
-            if (!ExisteProyecto(proyectos.Descripcion))
-                return Insertar(proyectos);
+            bool insertado = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                contexto.Add(tareasTipos);
+                insertado = contexto.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return insertado;
+        }
+
+        private static bool Modificar(TareasTipos tareasTipos)
+        {
+            bool modificado = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                contexto.Entry(tareasTipos).State = EntityState.Modified;
+                modificado = contexto.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return modificado;
+        }
+
+        public static bool Guardar(TareasTipos tiposTarea)
+        {
+            if (!Existe(tiposTarea.Descripcion))
+                return Insertar(tiposTarea);
             else
-                return Modificar(proyectos);
+                return Modificar(tiposTarea);
+            
         }
 
-        public static Proyectos Buscar(int id)
+        public static bool Existe(string descripcion)
         {
-            var contexto = new Contexto();
-            var proyectos = new Proyectos();
+            bool encontrado = false;
+            Contexto contexto = new Contexto();
 
             try
             {
-                proyectos = contexto.Proyectos.Include(x => x.DetalleProyecto).Where(z => z.ProyectoId == id).SingleOrDefault();
+                encontrado = contexto.TareasTipos.Any(e => e.Descripcion.ToLower() == descripcion.ToLower());
             }
             catch (Exception)
             {
@@ -114,42 +152,17 @@ namespace Parcial2_ap1_2018_0971.BLL
                 contexto.Dispose();
             }
 
-            return proyectos;
+            return encontrado;
         }
 
-        public static bool Eliminar(int id)
+        public static List<TareasTipos> GetList(Expression<Func<TareasTipos, bool>> criterio)
         {
-            bool paso = false;
+            List<TareasTipos> lista = new List<TareasTipos>();
             Contexto contexto = new Contexto();
 
             try
             {
-                var eliminar = contexto.Proyectos.Find(id);
-                contexto.Entry(eliminar).State = EntityState.Deleted;
-
-                paso = contexto.SaveChanges() > 0;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-
-            return paso;
-        }
-
-        public static List<Proyectos> GetList(Expression<Func<Proyectos, bool>> criterio)
-        {
-            List<Proyectos> lista = new List<Proyectos>();
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                lista = contexto.Proyectos.Where(criterio).ToList();
+                lista = contexto.TareasTipos.Where(criterio).ToList();
             }
             catch (Exception)
             {
@@ -164,14 +177,14 @@ namespace Parcial2_ap1_2018_0971.BLL
             return lista;
         }
 
-        public static List<Proyectos> GetProyectos()
+        public static List<TareasTipos> GetTareasTipos()
         {
-            List<Proyectos> lista = new List<Proyectos>();
+            List<TareasTipos> lista = new List<TareasTipos>();
             Contexto contexto = new Contexto();
 
             try
             {
-                lista = contexto.Proyectos.ToList();
+                lista = contexto.TareasTipos.ToList();
             }
             catch (Exception)
             {

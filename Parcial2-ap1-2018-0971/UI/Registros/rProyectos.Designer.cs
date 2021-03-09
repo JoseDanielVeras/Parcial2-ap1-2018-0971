@@ -38,17 +38,17 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.DescripcionLabel = new System.Windows.Forms.Label();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.RemoverButton = new System.Windows.Forms.Button();
+            this.ProyectoDetalleDataGridView = new System.Windows.Forms.DataGridView();
+            this.AgregarButton = new System.Windows.Forms.Button();
             this.TiempoTextBox = new System.Windows.Forms.TextBox();
+            this.TiposTareasLabel = new System.Windows.Forms.Label();
             this.TiempoLabel = new System.Windows.Forms.Label();
+            this.Requerimientolabel = new System.Windows.Forms.Label();
             this.RequerimientoTextBox = new System.Windows.Forms.TextBox();
             this.TiposTareaComboBox = new System.Windows.Forms.ComboBox();
-            this.Requerimientolabel = new System.Windows.Forms.Label();
-            this.TiposTareasLabel = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label = new System.Windows.Forms.Label();
-            this.AgregarButton = new System.Windows.Forms.Button();
-            this.ProyectoDetalleDataGridView = new System.Windows.Forms.DataGridView();
-            this.RemoverButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
@@ -56,8 +56,8 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.TiempoTotalTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // FechaDateTimePicker
@@ -142,9 +142,40 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle Tarea";
             // 
-            // errorProvider1
+            // RemoverButton
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.RemoverButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.boton_x_16x16;
+            this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RemoverButton.Location = new System.Drawing.Point(6, 230);
+            this.RemoverButton.Name = "RemoverButton";
+            this.RemoverButton.Size = new System.Drawing.Size(101, 25);
+            this.RemoverButton.TabIndex = 22;
+            this.RemoverButton.Text = "Remover Fila";
+            this.RemoverButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RemoverButton.UseVisualStyleBackColor = true;
+            this.RemoverButton.Click += new System.EventHandler(this.RemoverButton_Click);
+            // 
+            // ProyectoDetalleDataGridView
+            // 
+            this.ProyectoDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProyectoDetalleDataGridView.Location = new System.Drawing.Point(6, 66);
+            this.ProyectoDetalleDataGridView.Name = "ProyectoDetalleDataGridView";
+            this.ProyectoDetalleDataGridView.RowTemplate.Height = 25;
+            this.ProyectoDetalleDataGridView.Size = new System.Drawing.Size(630, 158);
+            this.ProyectoDetalleDataGridView.TabIndex = 21;
+            // 
+            // AgregarButton
+            // 
+            this.AgregarButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.anadir_16x16;
+            this.AgregarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AgregarButton.Location = new System.Drawing.Point(559, 36);
+            this.AgregarButton.Name = "AgregarButton";
+            this.AgregarButton.Size = new System.Drawing.Size(77, 25);
+            this.AgregarButton.TabIndex = 20;
+            this.AgregarButton.Text = "Agregar";
+            this.AgregarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AgregarButton.UseVisualStyleBackColor = true;
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
             // 
             // TiempoTextBox
             // 
@@ -152,6 +183,15 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.TiempoTextBox.Name = "TiempoTextBox";
             this.TiempoTextBox.Size = new System.Drawing.Size(103, 23);
             this.TiempoTextBox.TabIndex = 19;
+            // 
+            // TiposTareasLabel
+            // 
+            this.TiposTareasLabel.AutoSize = true;
+            this.TiposTareasLabel.Location = new System.Drawing.Point(6, 19);
+            this.TiposTareasLabel.Name = "TiposTareasLabel";
+            this.TiposTareasLabel.Size = new System.Drawing.Size(81, 15);
+            this.TiposTareasLabel.TabIndex = 14;
+            this.TiposTareasLabel.Text = "Tipos de Tarea";
             // 
             // TiempoLabel
             // 
@@ -161,6 +201,15 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.TiempoLabel.Size = new System.Drawing.Size(47, 15);
             this.TiempoLabel.TabIndex = 18;
             this.TiempoLabel.Text = "Tiempo";
+            // 
+            // Requerimientolabel
+            // 
+            this.Requerimientolabel.AutoSize = true;
+            this.Requerimientolabel.Location = new System.Drawing.Point(146, 19);
+            this.Requerimientolabel.Name = "Requerimientolabel";
+            this.Requerimientolabel.Size = new System.Drawing.Size(143, 15);
+            this.Requerimientolabel.TabIndex = 15;
+            this.Requerimientolabel.Text = "Requerimiento de la Tarea";
             // 
             // RequerimientoTextBox
             // 
@@ -176,24 +225,11 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.TiposTareaComboBox.Name = "TiposTareaComboBox";
             this.TiposTareaComboBox.Size = new System.Drawing.Size(121, 23);
             this.TiposTareaComboBox.TabIndex = 16;
+            this.TiposTareaComboBox.SelectedIndexChanged += new System.EventHandler(this.TiposTareaComboBox_SelectedIndexChanged);
             // 
-            // Requerimientolabel
+            // errorProvider1
             // 
-            this.Requerimientolabel.AutoSize = true;
-            this.Requerimientolabel.Location = new System.Drawing.Point(146, 19);
-            this.Requerimientolabel.Name = "Requerimientolabel";
-            this.Requerimientolabel.Size = new System.Drawing.Size(143, 15);
-            this.Requerimientolabel.TabIndex = 15;
-            this.Requerimientolabel.Text = "Requerimiento de la Tarea";
-            // 
-            // TiposTareasLabel
-            // 
-            this.TiposTareasLabel.AutoSize = true;
-            this.TiposTareasLabel.Location = new System.Drawing.Point(6, 19);
-            this.TiposTareasLabel.Name = "TiposTareasLabel";
-            this.TiposTareasLabel.Size = new System.Drawing.Size(81, 15);
-            this.TiposTareasLabel.TabIndex = 14;
-            this.TiposTareasLabel.Text = "Tipos de Tarea";
+            this.errorProvider1.ContainerControl = this;
             // 
             // label
             // 
@@ -203,41 +239,6 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.label.Size = new System.Drawing.Size(81, 15);
             this.label.TabIndex = 14;
             this.label.Text = "Tipos de Tarea";
-            // 
-            // AgregarButton
-            // 
-            this.AgregarButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.anadir_16x16;
-            this.AgregarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarButton.Location = new System.Drawing.Point(559, 36);
-            this.AgregarButton.Name = "AgregarButton";
-            this.AgregarButton.Size = new System.Drawing.Size(77, 25);
-            this.AgregarButton.TabIndex = 20;
-            this.AgregarButton.Text = "Agregar";
-            this.AgregarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AgregarButton.UseVisualStyleBackColor = true;
-            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
-            // 
-            // ProyectoDetalleDataGridView
-            // 
-            this.ProyectoDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProyectoDetalleDataGridView.Location = new System.Drawing.Point(6, 66);
-            this.ProyectoDetalleDataGridView.Name = "ProyectoDetalleDataGridView";
-            this.ProyectoDetalleDataGridView.RowTemplate.Height = 25;
-            this.ProyectoDetalleDataGridView.Size = new System.Drawing.Size(630, 158);
-            this.ProyectoDetalleDataGridView.TabIndex = 21;
-            // 
-            // RemoverButton
-            // 
-            this.RemoverButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.boton_x_16x16;
-            this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RemoverButton.Location = new System.Drawing.Point(6, 230);
-            this.RemoverButton.Name = "RemoverButton";
-            this.RemoverButton.Size = new System.Drawing.Size(101, 25);
-            this.RemoverButton.TabIndex = 22;
-            this.RemoverButton.Text = "Remover Fila";
-            this.RemoverButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RemoverButton.UseVisualStyleBackColor = true;
-            this.RemoverButton.Click += new System.EventHandler(this.RemoverButton_Click);
             // 
             // NuevoButton
             // 
@@ -314,11 +315,12 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.Controls.Add(this.ProyectoIdLabel);
             this.Name = "rProyectos";
             this.Text = "Registro Proyectos";
+            this.Load += new System.EventHandler(this.rProyectos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
