@@ -37,7 +37,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             this.DescripcionLabel = new System.Windows.Forms.Label();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DetalleTareaGroupBox = new System.Windows.Forms.GroupBox();
             this.RemoverButton = new System.Windows.Forms.Button();
             this.ProyectoDetalleDataGridView = new System.Windows.Forms.DataGridView();
             this.AgregarButton = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.TiempoToalLabel = new System.Windows.Forms.Label();
             this.TiempoTotalTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.DetalleTareaGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,8 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // DescripcionTextBox
             // 
+            this.DescripcionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DescripcionTextBox.Location = new System.Drawing.Point(12, 135);
             this.DescripcionTextBox.Multiline = true;
             this.DescripcionTextBox.Name = "DescripcionTextBox";
@@ -124,26 +126,30 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // groupBox1
+            // DetalleTareaGroupBox
             // 
-            this.groupBox1.Controls.Add(this.RemoverButton);
-            this.groupBox1.Controls.Add(this.ProyectoDetalleDataGridView);
-            this.groupBox1.Controls.Add(this.AgregarButton);
-            this.groupBox1.Controls.Add(this.TiempoTextBox);
-            this.groupBox1.Controls.Add(this.TiposTareasLabel);
-            this.groupBox1.Controls.Add(this.TiempoLabel);
-            this.groupBox1.Controls.Add(this.Requerimientolabel);
-            this.groupBox1.Controls.Add(this.RequerimientoTextBox);
-            this.groupBox1.Controls.Add(this.TiposTareaComboBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 205);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(649, 271);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalle Tarea";
+            this.DetalleTareaGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DetalleTareaGroupBox.Controls.Add(this.RemoverButton);
+            this.DetalleTareaGroupBox.Controls.Add(this.ProyectoDetalleDataGridView);
+            this.DetalleTareaGroupBox.Controls.Add(this.AgregarButton);
+            this.DetalleTareaGroupBox.Controls.Add(this.TiempoTextBox);
+            this.DetalleTareaGroupBox.Controls.Add(this.TiposTareasLabel);
+            this.DetalleTareaGroupBox.Controls.Add(this.TiempoLabel);
+            this.DetalleTareaGroupBox.Controls.Add(this.Requerimientolabel);
+            this.DetalleTareaGroupBox.Controls.Add(this.RequerimientoTextBox);
+            this.DetalleTareaGroupBox.Controls.Add(this.TiposTareaComboBox);
+            this.DetalleTareaGroupBox.Location = new System.Drawing.Point(12, 205);
+            this.DetalleTareaGroupBox.Name = "DetalleTareaGroupBox";
+            this.DetalleTareaGroupBox.Size = new System.Drawing.Size(649, 271);
+            this.DetalleTareaGroupBox.TabIndex = 12;
+            this.DetalleTareaGroupBox.TabStop = false;
+            this.DetalleTareaGroupBox.Text = "Detalle Tarea";
             // 
             // RemoverButton
             // 
+            this.RemoverButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.RemoverButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.boton_x_16x16;
             this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RemoverButton.Location = new System.Drawing.Point(6, 230);
@@ -157,6 +163,9 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // ProyectoDetalleDataGridView
             // 
+            this.ProyectoDetalleDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ProyectoDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProyectoDetalleDataGridView.Location = new System.Drawing.Point(6, 66);
             this.ProyectoDetalleDataGridView.Name = "ProyectoDetalleDataGridView";
@@ -166,6 +175,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // AgregarButton
             // 
+            this.AgregarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AgregarButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.anadir_16x16;
             this.AgregarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AgregarButton.Location = new System.Drawing.Point(559, 36);
@@ -179,6 +189,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // TiempoTextBox
             // 
+            this.TiempoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TiempoTextBox.Location = new System.Drawing.Point(444, 37);
             this.TiempoTextBox.Name = "TiempoTextBox";
             this.TiempoTextBox.Size = new System.Drawing.Size(103, 23);
@@ -195,6 +206,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // TiempoLabel
             // 
+            this.TiempoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TiempoLabel.AutoSize = true;
             this.TiempoLabel.Location = new System.Drawing.Point(444, 19);
             this.TiempoLabel.Name = "TiempoLabel";
@@ -213,6 +225,8 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // RequerimientoTextBox
             // 
+            this.RequerimientoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RequerimientoTextBox.Location = new System.Drawing.Point(146, 37);
             this.RequerimientoTextBox.Name = "RequerimientoTextBox";
             this.RequerimientoTextBox.Size = new System.Drawing.Size(279, 23);
@@ -242,6 +256,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // NuevoButton
             // 
+            this.NuevoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.NuevoButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources._new;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.Location = new System.Drawing.Point(12, 480);
@@ -255,6 +270,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GuardarButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.disco_flexible;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.GuardarButton.Location = new System.Drawing.Point(116, 480);
@@ -268,6 +284,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // EliminarButton
             // 
+            this.EliminarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.EliminarButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.eliminar;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.Location = new System.Drawing.Point(226, 480);
@@ -281,8 +298,9 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // TiempoToalLabel
             // 
+            this.TiempoToalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TiempoToalLabel.AutoSize = true;
-            this.TiempoToalLabel.Location = new System.Drawing.Point(480, 502);
+            this.TiempoToalLabel.Location = new System.Drawing.Point(480, 503);
             this.TiempoToalLabel.Name = "TiempoToalLabel";
             this.TiempoToalLabel.Size = new System.Drawing.Size(75, 15);
             this.TiempoToalLabel.TabIndex = 16;
@@ -290,6 +308,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             // TiempoTotalTextBox
             // 
+            this.TiempoTotalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TiempoTotalTextBox.Location = new System.Drawing.Point(561, 499);
             this.TiempoTotalTextBox.Name = "TiempoTotalTextBox";
             this.TiempoTotalTextBox.Size = new System.Drawing.Size(100, 23);
@@ -299,13 +318,13 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 569);
+            this.ClientSize = new System.Drawing.Size(672, 549);
             this.Controls.Add(this.TiempoTotalTextBox);
             this.Controls.Add(this.TiempoToalLabel);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.DetalleTareaGroupBox);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.DescripcionLabel);
@@ -313,12 +332,13 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
             this.Controls.Add(this.FechaLabel);
             this.Controls.Add(this.ProyectoIdNumericUpDown);
             this.Controls.Add(this.ProyectoIdLabel);
+            this.MinimumSize = new System.Drawing.Size(688, 588);
             this.Name = "rProyectos";
             this.Text = "Registro Proyectos";
             this.Load += new System.EventHandler(this.rProyectos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.DetalleTareaGroupBox.ResumeLayout(false);
+            this.DetalleTareaGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -335,7 +355,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
         private System.Windows.Forms.TextBox DescripcionTextBox;
         private System.Windows.Forms.Label DescripcionLabel;
         private System.Windows.Forms.Button BuscarButton;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox DetalleTareaGroupBox;
         private System.Windows.Forms.Button AgregarButton;
         private System.Windows.Forms.TextBox TiempoTextBox;
         private System.Windows.Forms.Label TiposTareasLabel;

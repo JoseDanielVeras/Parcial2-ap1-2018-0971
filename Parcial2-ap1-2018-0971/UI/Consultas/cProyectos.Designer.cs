@@ -71,6 +71,8 @@ namespace Parcial2_ap1_2018_0971.UI.Consultas
             // 
             // CriterioTextBox
             // 
+            this.CriterioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CriterioTextBox.Location = new System.Drawing.Point(177, 27);
             this.CriterioTextBox.Name = "CriterioTextBox";
             this.CriterioTextBox.Size = new System.Drawing.Size(330, 23);
@@ -78,6 +80,7 @@ namespace Parcial2_ap1_2018_0971.UI.Consultas
             // 
             // BuscarButton
             // 
+            this.BuscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BuscarButton.Image = global::Parcial2_ap1_2018_0971.Properties.Resources.lupa;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarButton.Location = new System.Drawing.Point(528, 25);
@@ -91,6 +94,9 @@ namespace Parcial2_ap1_2018_0971.UI.Consultas
             // 
             // cProyectosDataGridView
             // 
+            this.cProyectosDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cProyectosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cProyectosDataGridView.Location = new System.Drawing.Point(12, 56);
             this.cProyectosDataGridView.Name = "cProyectosDataGridView";
@@ -109,7 +115,6 @@ namespace Parcial2_ap1_2018_0971.UI.Consultas
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.CriterioLabel);
             this.Controls.Add(this.FiltroLabel);
-            this.MaximumSize = new System.Drawing.Size(631, 405);
             this.MinimumSize = new System.Drawing.Size(631, 405);
             this.Name = "cProyectos";
             this.Text = "Consulta Proyectos";
