@@ -64,7 +64,7 @@ namespace Parcial2_ap1_2018_0971.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM ProyectosDatalle where ProyectoId = {proyectos.ProyectoId}");
+                contexto.Database.ExecuteSqlRaw($"Delete FROM ProyectosDetalle WHERE ProyectoId = {proyectos.ProyectoId}");
                 
                 foreach(var anterior in proyectos.DetalleProyecto)
                 {

@@ -73,12 +73,12 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
                 DescripcionTextBox.Focus();
                 paso = false;
             }
-            if(ProyectosBLL.ExisteProyecto(DescripcionTextBox.Text))
+            /*if(ProyectosBLL.ExisteProyecto(DescripcionTextBox.Text))
             {
                 errorProvider1.SetError(DescripcionTextBox, "Obligatorio");
                 DescripcionTextBox.Focus();
                 paso = false;
-            }
+            }*/
             if(this.Detalle.Count == 0)
             {
                 errorProvider1.SetError(ProyectoDetalleDataGridView, "Obligatorio");
@@ -159,6 +159,7 @@ namespace Parcial2_ap1_2018_0971.UI.Registros
 
             proyectos = LlenaClases();
             var paso = ProyectosBLL.Guardar(proyectos);
+
             if(paso)
             {
                 MessageBox.Show("Se ha Guardado", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
